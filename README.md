@@ -1,4 +1,4 @@
-# Automação de Preenchimento de Formulário - Lists SharePoint
+# Automação de Preenchimento de Formulário - Listas SharePoint
 
 Este projeto foi desenvolvido para automatizar o processo de preenchimento de formulários no SharePoint a partir de dados contidos em uma planilha Excel. Utilizando o Selenium para controlar o navegador e o Tkinter para criar uma interface gráfica amigável, o sistema facilita o envio repetido de dados para o SharePoint, reduzindo erros manuais e economizando tempo.
 
