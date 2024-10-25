@@ -1,44 +1,40 @@
-# Automação de Preenchimento de Formulário - Listas SharePoint
+# SharePoint List Form Automation
 
-Este projeto foi desenvolvido para automatizar o processo de preenchimento de formulários no SharePoint a partir de dados contidos em uma planilha Excel. Utilizando o Selenium para controlar o navegador e o Tkinter para criar uma interface gráfica amigável, o sistema facilita o envio repetido de dados para o SharePoint, reduzindo erros manuais e economizando tempo.
+This project was developed to automate the form-filling process in SharePoint using data from an Excel spreadsheet. Leveraging Selenium for browser control and Tkinter for a user-friendly graphical interface, the system facilitates the repeated submission of data to SharePoint, reducing manual errors and saving time.
 
-FUNCIONALIDADES PRINCIPAIS
+**KEY FEATURES**
 
-1. Automação de Preenchimento de Formulário
-O sistema extrai dados de uma planilha Excel e preenche automaticamente um formulário hospedado no SharePoint. Cada campo do formulário é mapeado para uma coluna específica da planilha.
+1. **Automated Form Filling**  
+   The system extracts data from an Excel spreadsheet and automatically fills out a form hosted on SharePoint. Each form field is mapped to a specific column in the spreadsheet.
 
-2. Interface Gráfica com Tkinter
-O usuário pode iniciar o processo de automação através de uma interface gráfica simples. A interface permite abrir o navegador, acessar o formulário e iniciar o processo de preenchimento com apenas alguns cliques.
+2. **Graphical Interface with Tkinter**  
+   Users can initiate the automation process via a simple graphical interface. This interface allows users to open the browser, access the form, and start the filling process with just a few clicks.
 
-3. Integração com Excel
-Os dados são extraídos diretamente de um arquivo Excel, tornando o processo flexível e fácil de atualizar. O sistema suporta planilhas estruturadas com 17 colunas, conforme o modelo fornecido.
+3. **Excel Integration**  
+   Data is pulled directly from an Excel file, making the process flexible and easy to update. The system supports structured sheets with 17 columns, following the provided template.
 
-4. Suporte a Execução Paralela
-O preenchimento dos dados no formulário ocorre em uma thread separada, garantindo que a interface gráfica continue responsiva enquanto o processo de automação está em andamento.
+4. **Support for Parallel Execution**  
+   Form data filling occurs in a separate thread, ensuring that the graphical interface remains responsive while the automation is in progress.
 
-TECNOLOGIAS UTILIZADAS
+**TECHNOLOGIES USED**
 
-1. Python: Linguagem principal utilizada no projeto.
+1. **Python**: Main programming language used in the project.
+2. **Selenium**: Used to control the browser and automatically fill in form fields on SharePoint.
+3. **Tkinter**: Library used to create the graphical user interface.
+4. **Pandas**: Used for data manipulation and reading from Excel spreadsheets.
+5. **Excel**: Data source for form filling.
 
-2. Selenium: Utilizado para controlar o navegador e preencher automaticamente os campos do formulário no SharePoint.
+**HOW IT WORKS**
 
-3. Tkinter: Biblioteca para criar a interface gráfica do usuário.
+1. **Excel Sheet Reading**: The system loads an Excel sheet containing the required data to fill out the form. The sheet should have the following columns:
+   - DATA PROVISION, CLIENT, BUSINESS UNIT, IC, DOC TYPE, DOC NUMBER, CLASSIFICATION, GROSS REVENUE, ICMS, ISS, PIS, COFINS, CPRB, NET REVENUE, REMARKS, STATUS, LINK
 
-4. Pandas: Utilizado para manipulação e leitura dos dados da planilha Excel.
+2. **Browser Opening**: The system automatically opens the browser (Chrome) and accesses the SharePoint page where the form is hosted.
 
-5. Excel: Fonte de dados para o preenchimento do formulário.
+3. **Automated Filling**: Using data from the spreadsheet, the system fills each form field and clicks the “Submit” button. After submission, the system waits for the form to reload to process the next row of data.
 
-COMO FUNCIONA
+4. **Graphical Interface**: The interface allows users to open the browser and start the filling process quickly and easily, all with just a few clicks.
 
-Leitura da Planilha Excel: O sistema carrega uma planilha Excel que contém os dados necessários para preencher o formulário. A planilha deve ter as seguintes colunas:
-DATA PROVISÃO, CLIENTE, UND NEGÓCIO, I.C, TIPO DOC, NÚM DOC, CLASSIFICAÇÃO, RECEITA BRUTA, ICMS, ISS, PIS, COFINS, CPRB, RECEITA LÍQUIDA, OBSERVAÇÃO, STATUS, LINK
+**CONCLUSION**
 
-Abertura do Navegador: O sistema abre automaticamente o navegador (Chrome) e acessa a página do SharePoint onde o formulário está hospedado.
-
-Preenchimento Automático: Utilizando os dados da planilha, o sistema preenche cada campo do formulário e clica no botão "Enviar". Após o envio, o sistema aguarda o carregamento do formulário novamente para processar a próxima linha de dados.
-
-Interface Gráfica: A interface permite ao usuário abrir o navegador e iniciar o processo de preenchimento de forma simples e rápida, tudo com alguns cliques.
-
-CONCLUSÃO
-
-Este projeto oferece uma solução prática e eficiente para automatizar o preenchimento de formulários no SharePoint, utilizando dados provenientes de uma planilha Excel. Com uma interface gráfica intuitiva e integração com Selenium, o sistema simplifica o processo de inserção de grandes volumes de dados, tornando-o mais rápido e menos propenso a erros manuais.
+This project provides a practical and efficient solution for automating form-filling in SharePoint, using data from an Excel spreadsheet. With an intuitive graphical interface and integration with Selenium, the system simplifies large-volume data entry, making it faster and less error-prone.
